@@ -1,6 +1,7 @@
 package packages;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class questionsPage {
 
@@ -8,11 +9,15 @@ public class questionsPage {
         // Create and configure the panel
         JPanel panel = new JPanel();
         panel.setBounds(0, 0, 600, 600);
-        panel.setLayout(null);
+        panel.setLayout(new BoxLayout(panel , BoxLayout.PAGE_AXIS));
+        panel.setBackground(Color.yellow);
+        panel.add(Box.createRigidArea(new Dimension(1 , 1)));
+
 
         // Question 1
         JLabel question1 = new JLabel("چقدر رابط کاربری نرم افزار از نظر شما جذاب است؟");
         question1.setBounds(10, 10, 300, 20);
+
 
         JRadioButton radio1_1 = new JRadioButton("۱");
         radio1_1.setBounds(10, 40, 100, 20);
