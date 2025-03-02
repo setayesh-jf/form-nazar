@@ -1,8 +1,10 @@
 import javax.swing.*;
+import java.awt.Font;
 import packages.informationPage;
 
-public class Main {
+import java.awt.*;
 
+public class Main {
     public static void main(String[] args) {
         // Create and configure the main frame
         JFrame frame = new JFrame("فرم نظرسنجی");
@@ -16,12 +18,16 @@ public class Main {
         panel.setLayout(null);
         panel.setBounds(0, 0, 600, 600);
 
+        Font font = new Font("font's name", Font.BOLD, 14);
+
         // Create title label
         JLabel title = new JLabel("فرم نظرسنجی");
+        title.setFont(font);
         title.setBounds(10, 10, 100, 20);
 
         // Create start button
         JButton startButton = new JButton("شروع!");
+        startButton.setFont(font);
         startButton.setBounds(10, 40, 100, 20);
 
         // Add components to the panel
@@ -41,7 +47,6 @@ public class Main {
             // Load and display the first page
             informationPage informationPage = new informationPage();
             informationPage.create(frame);
-
             // Refresh the frame
             frame.revalidate();
             frame.repaint();
