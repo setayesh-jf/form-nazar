@@ -1,10 +1,10 @@
 import javax.swing.*;
+import java.awt.Font;
 import packages.informationPage;
 
 import java.awt.*;
 
 public class Main {
-
     public static void main(String[] args) {
         // Create and configure the main frame
         JFrame frame = new JFrame("Survey Form");
@@ -20,12 +20,17 @@ public class Main {
         panel.setBounds(0, 0, 600, 600);
         panel.setBackground(Color.yellow);
 
+        Font font = new Font("font's name", Font.BOLD, 14);
+
         // Create title label
+
         JLabel title = new JLabel("Survey Form");
+        title.setFont(font);
         title.setBounds(10, 10, 100, 20);
 
-        // Create start button
+       // Create start button
         JButton startButton = new JButton("Start!");
+        startButton.setFont(font);
         startButton.setBounds(10, 40, 100, 20);
         startButton.setHorizontalAlignment(JButton.CENTER);
 
@@ -46,7 +51,6 @@ public class Main {
             // Load and display the first page
             informationPage informationPage = new informationPage();
             informationPage.create(frame);
-
             // Refresh the frame
             frame.revalidate();
             frame.repaint();
